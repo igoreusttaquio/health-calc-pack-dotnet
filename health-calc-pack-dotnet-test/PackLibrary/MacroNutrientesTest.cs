@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Drawing;
 using health_calc_pack_dotnet;
 using health_calc_pack_dotnet.MacroNutrientesStrategies;
 using health_calc_pack_dotnet.Models;
+using static health_calc_pack_dotnet_test.PackLibrary.MacroNutrientesTest;
 
 namespace health_calc_pack_dotnet_test.PackLibrary;
 
