@@ -5,18 +5,18 @@ using health_calc_pack_dotnet.Models;
 
 namespace health_calc_pack_dotnet;
 
-public class MacroNutrientes 
+public class MacroNutrientesConext
 {
-    private IMacroNutrientesStrategy MacroNutrientesStrategy { get; }
+    private IMacroNutrientesStrategy? strategy { get; set; }
 
-    public MacroNutrientes(IMacroNutrientesStrategy macroNutrientesStrategy)
+    public void SetStrategy(IMacroNutrientesStrategy macroNutrientesStrategy)
     {
-        MacroNutrientesStrategy = macroNutrientesStrategy;
+        strategy = macroNutrientesStrategy;
     }
 
-    public MacroNutrientesModel CalcularMacroNutrientes(double peso)
+    public MacroNutrientesModel? ExecuteStratery(double peso)
     {
-        return MacroNutrientesStrategy.CalcularMacroNutrientes(peso);
+        return strategy?.CalcularMacroNutrientes(peso) ?? null;
     }
 }
 

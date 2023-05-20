@@ -1,5 +1,5 @@
 ﻿using System;
-namespace health_calc_pack_dotnet.Interface;
+namespace health_calc_pack_dotnet.Interfaces;
 
 public interface IIMC
 {

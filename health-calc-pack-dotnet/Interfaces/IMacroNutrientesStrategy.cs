@@ -1,10 +1,10 @@
 ﻿using System;
-using health_calc_pack_dotnet.Enum;
+using health_calc_pack_dotnet.Enums;
 using health_calc_pack_dotnet.Models;
-namespace health_calc_pack_dotnet.Interface;
+namespace health_calc_pack_dotnet.Interfaces;
 
 public interface IMacroNutrientesStrategy
 {
-    MacroNutrientesModel CalcularMacroNutrientes(ObjetivoFisicoEnum objetivoFicico, double peso);
+    MacroNutrientesModel CalcularMacroNutrientes(double peso);
 }
 

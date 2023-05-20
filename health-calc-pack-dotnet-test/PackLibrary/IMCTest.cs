@@ -1,6 +1,6 @@
 ﻿using System;
 using health_calc_pack_dotnet;
-using health_calc_pack_dotnet.Interface;
+using health_calc_pack_dotnet.Interfaces;
 
 namespace health_calc_pack_dotnet_test.PackLibrary;
 
