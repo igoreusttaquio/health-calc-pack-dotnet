@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "health-calc-pack-dotnet", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "health-calc-pack-dotnet-test", "..\health-calc-pack-dotnet-test\health-calc-pack-dotnet-test.csproj", "{85B330D0-E7F4-48B3-897F-EB2C1104A500}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "helt-calck-pack-dotnet-console", "..\helt-calck-pack-dotnet-console\helt-calck-pack-dotnet-console.csproj", "{9C9C21FE-F168-44D8-8391-084B752AD895}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{85B330D0-E7F4-48B3-897F-EB2C1104A500}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85B330D0-E7F4-48B3-897F-EB2C1104A500}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85B330D0-E7F4-48B3-897F-EB2C1104A500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9C21FE-F168-44D8-8391-084B752AD895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9C21FE-F168-44D8-8391-084B752AD895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9C21FE-F168-44D8-8391-084B752AD895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9C21FE-F168-44D8-8391-084B752AD895}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
