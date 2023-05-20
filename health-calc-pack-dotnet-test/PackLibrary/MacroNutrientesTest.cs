@@ -32,7 +32,7 @@ public class MacroNutrientesTest
 		// Arrange
 		MacroNutrientesModel esperado = new(carboidratos, preteinas, gorduras);
 		MacroNutrientesConext context = new();
-        double peso = 88.8;
+        double peso = 88.80;
 
         switch (objetivo)
         {
@@ -54,6 +54,39 @@ public class MacroNutrientesTest
 
 		// Assert
 		Assert.Equal(esperado, resultado);
+    }
+
+    [Theory]
+    [InlineData(ObjetivoEnum.PERDER_PESO, 266.4, 355.2, 266.4)]
+    [InlineData(ObjetivoEnum.MANTER_PESO, 355.2, 355.2, 177.6)]
+    [InlineData(ObjetivoEnum.GANHAR_MASSA_MUSCULAR, 355.2, 177.6, 88.8)]
+    public void CalculaMacroNutrientes_QuandoDadosValidos_EntaoRetornaFalso(ObjetivoEnum objetivo, double carboidratos, double preteinas, double gorduras)
+    {
+        // Arrange
+        MacroNutrientesModel esperado = new(carboidratos, preteinas, gorduras);
+        MacroNutrientesConext context = new();
+        double peso = 80.0;
+
+        switch (objetivo)
+        {
+            case ObjetivoEnum.PERDER_PESO:
+                context.SetStrategy(new PerderPesoStrategy());
+                break;
+            case ObjetivoEnum.MANTER_PESO:
+                context.SetStrategy(new ManterPesoStrategy());
+                break;
+            case ObjetivoEnum.GANHAR_MASSA_MUSCULAR:
+                context.SetStrategy(new GanharMassaMuscularStrategy());
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(objetivo), $"Objetivo: não esperado");
+        }
+
+        // Act
+        MacroNutrientesModel resultado = context.ExecuteStratery(peso)!;
+
+        // Assert
+        Assert.NotEqual(esperado, resultado);
     }
 }
 
